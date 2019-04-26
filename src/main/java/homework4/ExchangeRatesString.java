@@ -85,6 +85,47 @@ public class ExchangeRatesString {
         return rates;
     }
 
+    private static double[] oschadRates(WebDriver driver) {
+        double[] rates = new double[2];
+
+        driver.get("https://www.oschadbank.ua/ua");
+        String pageStr = driver.getPageSource();
+
+        // String oschRate = driver.findElement(By.xpath("//*[contains(@class, 'buy-USD')]")).getAttribute("data-buy");
+        // <strong class="buy-USD" data-buy="26.5000">
+
+        String classDiv = "<strong class=\"buy-USD\" data-buy=";
+        int divIndex = pageStr.indexOf(classDiv) + classDiv.length();
+        String ratesStr = pageStr.substring(divIndex, divIndex + 10);
+        rates[0] = Double.parseDouble(ratesStr.substring(1, 8));
+
+        classDiv = "<strong class=\"sell-USD\" data-sell=";
+        divIndex = pageStr.indexOf(classDiv) + classDiv.length();
+        ratesStr = pageStr.substring(divIndex, divIndex + 10);
+        rates[1] = Double.parseDouble(ratesStr.substring(1, 8));
+
+        return rates;
+    }
+
+    private static double[] nbuRates(WebDriver driver) {
+        double[] rates = new double[2];
+
+        driver.get("https://www.bank.gov.ua/control/uk/curmetal/detail/currency?period=daily");
+        String pageStr = driver.getPageSource();
+
+        //String nbuRate = driver.findElement(By.xpath("//*[contains(text(), 'Долар')]/../td[5]")).getText();
+
+        pageStr = pageStr.substring(pageStr.indexOf("Долар США"));
+        String classDiv = "<td class=\"cell_c";
+        int divIndex = pageStr.indexOf(classDiv) + classDiv.length();
+        String ratesStr = pageStr.substring(divIndex, divIndex + 20);
+
+        rates[0] = Double.parseDouble(ratesStr.substring(2, 11));
+        rates[1] = rates[0];
+
+        return rates;
+    }
+
     @Test
     public void printFilmAttributes() throws InterruptedException {
         double[] buyRates = new double[5];
@@ -102,16 +143,13 @@ public class ExchangeRatesString {
         buyRates[2] = univRates[0];
         sellRates[2] = univRates[1];
 
-        driver.get("https://www.oschadbank.ua/ua");
-        String oschRate = driver.findElement(By.xpath("//*[contains(@class, 'buy-USD')]")).getAttribute("data-buy");
-        buyRates[3] = Double.parseDouble(oschRate);
-        oschRate = driver.findElement(By.xpath("//*[contains(@class, 'sell-USD')]")).getAttribute("data-sell");
-        sellRates[3] = Double.parseDouble(oschRate);
+        double[] oschRates = oschadRates(driver);
+        buyRates[3] = oschRates[0];
+        sellRates[3] = oschRates[1];
 
-        driver.get("https://www.bank.gov.ua/control/uk/curmetal/detail/currency?period=daily");
-        String nbuRate = driver.findElement(By.xpath("//*[contains(text(), 'Долар')]/../td[5]")).getText();
-        buyRates[4] = Double.parseDouble(nbuRate) / 100;
-        sellRates[4] = Double.parseDouble(nbuRate) / 100;
+        double[] nbuRates = nbuRates(driver);
+        buyRates[4] = nbuRates[0] / 100;
+        sellRates[4] = nbuRates[1] / 100;
 
         double sumBuy = 0, sumSell = 0;
         int bestBuyIndex = 0, bestSellIndex = 0, counter = 0;
