@@ -24,7 +24,7 @@ public class ExchangeRatesString {
 
     @BeforeTest
     public void setUp(){
-        //System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/version74/chromedriver");
         driver = new ChromeDriver();
     }
 
@@ -35,10 +35,53 @@ public class ExchangeRatesString {
         String pageStr = driver.getPageSource();
         //DIV sample: <div class="section-content rate">26.300&nbsp;/&nbsp;26.738</div>
         String classDiv = "<div class=\"section-content rate\">";
+        pageStr = pageStr.replaceAll("&nbsp;", "");
         int divIndex = pageStr.indexOf(classDiv) + classDiv.length();
-        String ratesStr = pageStr.substring(divIndex, divIndex + 15);
+        String ratesStr = pageStr.substring(divIndex, divIndex + 14);
         rates[0] = Double.parseDouble(ratesStr.split("\\/")[0].substring(0, 6));
-        rates[1] = Double.parseDouble(ratesStr.split("\\/")[1].substring(1, 6));
+        rates[1] = Double.parseDouble(ratesStr.split("\\/")[1].substring(0, 6));
+        return rates;
+    }
+
+    private static double[] ukrsibRates(WebDriver driver) {
+        double[] rates = new double[2];
+
+        driver.get("https://my.ukrsibbank.com/ru/personal/operations/currency_exchange/");
+        String pageStr = driver.getPageSource();
+
+        // <span class="mobile-curr-name">Покупка</span>
+        String classDiv = "<span class=\"mobile-curr-name\">Покупка</span>";
+        int divIndex = pageStr.indexOf(classDiv) + classDiv.length();
+        String ratesStr = pageStr.substring(divIndex, divIndex + 14);
+        rates[0] = Double.parseDouble(ratesStr.substring(0, 7));
+
+        classDiv = "<span class=\"mobile-curr-name\">Продажа</span>";
+        divIndex = pageStr.indexOf(classDiv) + classDiv.length();
+        ratesStr = pageStr.substring(divIndex, divIndex + 14);
+        rates[1] = Double.parseDouble(ratesStr.substring(0, 7));
+
+        return rates;
+    }
+
+    private static double[] universalRates(WebDriver driver) {
+        double[] rates = new double[2];
+
+        driver.get("https://www.universalbank.com.ua/");
+        String pageStr = driver.getPageSource();
+
+        String classDiv = "<td class=\"p-b-xs-2 p-y-1-sm\">";
+        pageStr = pageStr.replaceAll("\n", "");
+        int divIndex = pageStr.indexOf("rate table table-bordered light");
+        pageStr = pageStr.substring(divIndex);
+        divIndex = pageStr.indexOf("НБУ") + 1;
+        pageStr = pageStr.substring(divIndex);
+        divIndex = pageStr.indexOf(classDiv) + classDiv.length();
+        String ratesStr = pageStr.substring(divIndex, divIndex + 50).trim();
+        rates[0] = Double.parseDouble(ratesStr);
+        pageStr = pageStr.substring(divIndex + 5);
+        divIndex = pageStr.indexOf(classDiv) + classDiv.length();
+        ratesStr = pageStr.substring(divIndex, divIndex + 50).trim();
+        rates[1] = Double.parseDouble(ratesStr);
         return rates;
     }
 
@@ -51,17 +94,13 @@ public class ExchangeRatesString {
         buyRates[0] = privatRates[0];
         sellRates[0] = privatRates[1];
 
-        driver.get("https://my.ukrsibbank.com/ru/personal/operations/currency_exchange/");
-        String ukrsibRate = driver.findElement(By.xpath("//*[contains(@class, 'currency__ta')]/tbody/tr/td[2]")).getText();
-        buyRates[1] = Double.parseDouble(ukrsibRate);
-        ukrsibRate = driver.findElement(By.xpath("//*[contains(@class, 'currency__ta')]/tbody/tr/td[3]")).getText();
-        sellRates[1] = Double.parseDouble(ukrsibRate);
+        double[] uksibRates = ukrsibRates(driver);
+        buyRates[1] = uksibRates[0];
+        sellRates[1] = uksibRates[1];
 
-        driver.get("https://www.universalbank.com.ua/");
-        String univRate = driver.findElement(By.xpath("//*[contains(@class, 'currency dow')]/../td[2]")).getText();
-        buyRates[2] = Double.parseDouble(univRate);
-        univRate = driver.findElement(By.xpath("//*[contains(@class, 'currency dow')]/../td[3]")).getText();
-        sellRates[2] = Double.parseDouble(univRate);
+        double[] univRates = universalRates(driver);
+        buyRates[2] = univRates[0];
+        sellRates[2] = univRates[1];
 
         driver.get("https://www.oschadbank.ua/ua");
         String oschRate = driver.findElement(By.xpath("//*[contains(@class, 'buy-USD')]")).getAttribute("data-buy");
