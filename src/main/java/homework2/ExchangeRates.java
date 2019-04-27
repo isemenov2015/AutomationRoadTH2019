@@ -24,7 +24,7 @@ public class ExchangeRates {
 
     @BeforeTest
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/chromedriver");
         driver = new ChromeDriver();
     }
 
