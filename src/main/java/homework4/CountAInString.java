@@ -2,7 +2,7 @@ package homework4;
 
 import java.util.ArrayList;
 
-public class CountAInString {
+class CountAInString {
     private static ArrayList<Integer> aCounter(String str) {
         ArrayList<Integer> aList = new ArrayList<Integer>();
 

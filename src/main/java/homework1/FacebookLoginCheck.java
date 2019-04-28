@@ -16,7 +16,6 @@ public class FacebookLoginCheck {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/chromedriver");
 
-
         // FB credentials input (in order to not reveal own FB login and password)
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your FB login email: ");
@@ -46,7 +45,6 @@ public class FacebookLoginCheck {
         //Pause till message dialog is loaded
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[contains(@class, 'messagesContent')]")));
-
 
         WebElement messageWrapper = driver.findElement(By.xpath(".//a[contains(@class, 'messagesContent')]"));
         WebElement message = messageWrapper.findElement(By.xpath(".//div[contains(@class, '_1iji')]"));

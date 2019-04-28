@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.text.DecimalFormat;
 
 public class ExchangeRatesString {
-    WebDriver driver;
+    private WebDriver driver;
 
     private static String getBankById(int bankId) {
         switch (bankId) {
@@ -24,7 +24,7 @@ public class ExchangeRatesString {
 
     @BeforeTest
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/version74/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/version74/chromedriver");
         driver = new ChromeDriver();
     }
 
@@ -38,8 +38,8 @@ public class ExchangeRatesString {
         pageStr = pageStr.replaceAll("&nbsp;", "");
         int divIndex = pageStr.indexOf(classDiv) + classDiv.length();
         String ratesStr = pageStr.substring(divIndex, divIndex + 14);
-        rates[0] = Double.parseDouble(ratesStr.split("\\/")[0].substring(0, 6));
-        rates[1] = Double.parseDouble(ratesStr.split("\\/")[1].substring(0, 6));
+        rates[0] = Double.parseDouble(ratesStr.split("\\/")[0].substring(0, 6).replaceAll("[^\\d.-]", ""));
+        rates[1] = Double.parseDouble(ratesStr.split("\\/")[1].substring(0, 6).replaceAll("[^\\d.-]", ""));
         return rates;
     }
 
@@ -127,7 +127,7 @@ public class ExchangeRatesString {
     }
 
     @Test
-    public void printFilmAttributes() throws InterruptedException {
+    public void printFilmAttributes() {
         double[] buyRates = new double[5];
         double[] sellRates = new double[5];
 
