@@ -1,5 +1,7 @@
 package homework5_seabattle;
 
+import java.util.List;
+
 public class Player {
     private Strategy strategy;
     private Board board;
@@ -9,14 +11,14 @@ public class Player {
         this.strategy = strategy;
     }
 
-    String getNextMove() {
-        return strategy.getNextMove();
-    }
+    //String getNextMove() {
+    //    return strategy.getNextMove();
+    //}
 
-    void shoot(String move) {
-        board.shoot(move);
+    void shoot() {
+        board.shoot(strategy.getNextMove());
     }
-
+    List<String> getPossibleMoves() { return board.getFreeCells(); }
     Board getBoard() {
         return board;
     }
