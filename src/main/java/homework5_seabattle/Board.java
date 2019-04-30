@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Board {
-    static final int CELL_EMPTY = 0;
+    private static final int CELL_EMPTY = 0;
     static final int CELL_SHOOT_MISS = -1;
-    static final int CELL_SHIP = 1;
-    static final int CELL_SHIP_HIT = 2;
-    static final int BOARD_SIZE = 8;
+    private static final int CELL_SHIP = 1;
+    private static final int CELL_SHIP_HIT = 2;
+    private static final int BOARD_SIZE = 8;
     private int[][] board;
 
     Board() {
@@ -18,7 +18,7 @@ class Board {
                 board[i][j] = CELL_EMPTY;
     }
 
-    String getSymbolFromCellValue(int value, boolean showShips) {
+    private String getSymbolFromCellValue(int value, boolean showShips) {
         switch (value) {
             case CELL_SHOOT_MISS: return "*";
             case CELL_SHIP_HIT: return "X";
@@ -40,7 +40,7 @@ class Board {
         return boardStr;
     }
 
-    void shoot(String shot) {
+    int shoot(String shot) {
         int[] coords = new int[2];
 
         coords[1] = shot.charAt(0) - 'A';
@@ -49,15 +49,27 @@ class Board {
             case CELL_EMPTY: board[coords[0]][coords[1]] = CELL_SHOOT_MISS; break;
             case CELL_SHIP: board[coords[0]][coords[1]] = CELL_SHIP_HIT; break;
         }
+        return board[coords[0]][coords[1]];
     }
 
-    List<String> getFreeCells() {
+    List<String> getEmptyCells() {
         ArrayList<String> freeCells = new ArrayList<String>();
 
         for (int i = 0; i < BOARD_SIZE; i++)
             for (int j = 0; j < BOARD_SIZE; j++)
                 if (board[j][i] == CELL_EMPTY) {
-                    freeCells.add("" + (char) ('A' + i) + String.valueOf(j + 1));
+                    freeCells.add("" + (char) ('A' + i) + (j + 1));
+                }
+        return freeCells;
+    }
+
+    List<String> getShotableCells() {
+        ArrayList<String> freeCells = new ArrayList<String>();
+
+        for (int i = 0; i < BOARD_SIZE; i++)
+            for (int j = 0; j < BOARD_SIZE; j++)
+                if (board[j][i] == CELL_EMPTY || board[j][i] == CELL_SHIP) {
+                    freeCells.add("" + (char) ('A' + i) + (j + 1));
                 }
         return freeCells;
     }

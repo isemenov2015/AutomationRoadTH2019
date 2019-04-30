@@ -1,25 +1,21 @@
 package homework5_seabattle;
 
-import java.util.List;
-
-public class Player {
+class Player {
     private Strategy strategy;
     private Board board;
+    private String name;
 
-    Player(Board board, Strategy strategy) {
+    Player(String name, Board board, Strategy strategy) {
         this.board = board;
         this.strategy = strategy;
+        this.name = name;
     }
 
-    //String getNextMove() {
-    //    return strategy.getNextMove();
-    //}
-
-    void shoot() {
-        board.shoot(strategy.getNextMove());
+    int shoot() {
+        return strategy.getBoard().shoot(strategy.getNextMove());
     }
-    List<String> getPossibleMoves() { return board.getFreeCells(); }
     Board getBoard() {
         return board;
     }
+    String getName() {return this.name;}
 }

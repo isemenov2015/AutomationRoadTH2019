@@ -3,7 +3,7 @@ package homework5_seabattle;
 import java.util.List;
 import java.util.Scanner;
 
-public class HumanInputStrategy extends Strategy {
+class HumanInputStrategy extends Strategy {
 
     HumanInputStrategy(Board board) {
         super(board);
@@ -12,7 +12,7 @@ public class HumanInputStrategy extends Strategy {
     String getNextMove() {
         String move = "";
         Scanner input = new Scanner(System.in);
-        List<String> possibleMoves = board.getFreeCells();
+        List<String> possibleMoves = board.getShotableCells();
 
         System.out.println("Possible shots: " + possibleMoves);
         System.out.println("Make a shot");
@@ -25,4 +25,6 @@ public class HumanInputStrategy extends Strategy {
         }
         return move;
     }
+
+    Board getBoard() {return board;}
 }
