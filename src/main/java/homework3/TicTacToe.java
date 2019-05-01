@@ -25,7 +25,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-class TicTacToe {
+class  TicTacToe {
     static final int CELL_EMPTY = 0;
     static final int CELL_X = 1;
     static final int CELL_0 = -1;

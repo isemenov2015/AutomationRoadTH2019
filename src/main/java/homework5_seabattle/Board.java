@@ -13,9 +13,22 @@ class Board {
 
     Board() {
         board = new int[BOARD_SIZE][BOARD_SIZE];
+        int[] shipsList = {4}; // {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships length
+        initializeBoard(board);
+        placeShips(board, shipsList);
+    }
+
+    private static void initializeBoard(int[][] board) {
+        // fills the board with EMPTY_CELLs
         for (int i = 0; i < BOARD_SIZE; i++)
             for (int j = 0; j < BOARD_SIZE; j++)
                 board[i][j] = CELL_EMPTY;
+    }
+
+    private static void placeShips(int[][] board, int[] shipsList) {
+        // randomly places ships on an empty board
+        List<String> emptyCells = getEmptyCells(board);
+        // TODO
     }
 
     private String getSymbolFromCellValue(int value, boolean showShips) {
@@ -40,11 +53,21 @@ class Board {
         return boardStr;
     }
 
-    int shoot(String shot) {
-        int[] coords = new int[2];
+    private static String getCellAddress(int c0, int c1) {
+        return "" + (char)(c1 + 'A') + (char)(c0 + '0');
+    }
 
-        coords[1] = shot.charAt(0) - 'A';
-        coords[0] = shot.charAt(1) - '1';
+    private static int[] getCoordsFromString(String coords) {
+        int[] c = new int[2];
+
+        c[1] = coords.charAt(0) - 'A';
+        c[0] = coords.charAt(1) - '1';
+        return c;
+    }
+
+    int shoot(String shot) {
+        int[] coords = getCoordsFromString(shot);
+
         switch (board[coords[0]][coords[1]]) {
             case CELL_EMPTY: board[coords[0]][coords[1]] = CELL_SHOOT_MISS; break;
             case CELL_SHIP: board[coords[0]][coords[1]] = CELL_SHIP_HIT; break;
@@ -52,7 +75,7 @@ class Board {
         return board[coords[0]][coords[1]];
     }
 
-    List<String> getEmptyCells() {
+    static List<String> getEmptyCells(int[][] board) {
         ArrayList<String> freeCells = new ArrayList<String>();
 
         for (int i = 0; i < BOARD_SIZE; i++)
