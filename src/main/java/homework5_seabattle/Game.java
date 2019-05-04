@@ -3,7 +3,7 @@ package homework5_seabattle;
 public class Game {
     private static void printBoard(Player player1, Player player2) {
         String[] boardStr1 = player1.getBoard().boardAsString(true);
-        String[] boardStr2 = player2.getBoard().boardAsString(false);
+        String[] boardStr2 = player2.getBoard().boardAsString(true);
 
         System.out.println("     " + player1.getName() + " board:        " + player2.getName() + " board:");
         for (int i = 0; i < boardStr1.length; i++)

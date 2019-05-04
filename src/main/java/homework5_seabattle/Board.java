@@ -2,6 +2,7 @@ package homework5_seabattle;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 class Board {
     private static final int CELL_EMPTY = 0;
@@ -13,9 +14,10 @@ class Board {
 
     Board() {
         board = new int[BOARD_SIZE][BOARD_SIZE];
-        int[] shipsList = {4}; // {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships length
-        initializeBoard(board);
-        placeShips(board, shipsList);
+        int[] shipsList = {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships length
+        do {
+            initializeBoard(board);
+        } while (!placeShips(board, shipsList));
     }
 
     private static void initializeBoard(int[][] board) {
@@ -25,10 +27,46 @@ class Board {
                 board[i][j] = CELL_EMPTY;
     }
 
-    private static void placeShips(int[][] board, int[] shipsList) {
+    private static boolean placeShips(int[][] board, int[] shipsList) {
         // randomly places ships on an empty board
-        List<String> emptyCells = getEmptyCells(board);
-        // TODO
+        for (int shipLength : shipsList) {
+            ArrayList<ArrayList<String>> shipPlacements = new ArrayList<ArrayList<String>>();
+            for (int i = 0; i < board.length; i++)  // all possible horizontal placements
+                for (int j = 0; j <= board.length - shipLength; j++) {
+                    ArrayList<String> busyCells = new ArrayList<String>();
+                    for (int k = 0; k < shipLength; k++)
+                        if (board[i][j + k] == CELL_EMPTY) {
+                            busyCells.add(getCellAddress(i, j + k));
+                        }
+                    if (busyCells.size() == shipLength)
+                        shipPlacements.add(busyCells);
+                }
+            for (int i = 0; i <= board.length - shipLength; i++)  // all possible vertical placements
+                for (int j = 0; j < board.length; j++) {
+                    ArrayList<String> busyCells = new ArrayList<String>();
+                    for (int k = 0; k < shipLength; k++)
+                        if (board[i + k][j] == CELL_EMPTY) {
+                            busyCells.add(getCellAddress(i + k, j));
+                        }
+                    if (busyCells.size() == shipLength)
+                        shipPlacements.add(busyCells);
+                }
+            if (shipPlacements.size() == 0)
+                return false;
+            Random randomGenerator = new Random();
+            ArrayList<String> ship = shipPlacements.get(randomGenerator.nextInt(shipPlacements.size()));
+            System.out.println("Ship selected: " + ship);
+            placeShip(board, ship);
+        }
+        //System.out.println(shipPlacements);
+        return true;
+    }
+
+    private static void placeShip(int[][] board, List<String> ship) {
+        for (String coordsStr : ship) {
+            int[] coords = getCoordsFromString(coordsStr);
+            board[coords[0]][coords[1]] = CELL_SHIP;
+        }
     }
 
     private String getSymbolFromCellValue(int value, boolean showShips) {
@@ -40,7 +78,7 @@ class Board {
         }
     }
 
-    String[] boardAsString(boolean showShips) {
+     String[] boardAsString(boolean showShips) {
         String[] boardStr = new String[BOARD_SIZE+1];
         boardStr[0] = "   ";
         for (int i = 0; i < BOARD_SIZE; i++)
@@ -54,7 +92,7 @@ class Board {
     }
 
     private static String getCellAddress(int c0, int c1) {
-        return "" + (char)(c1 + 'A') + (char)(c0 + '0');
+        return "" + (char)(c1 + 'A') + (char)(c0 + '1');
     }
 
     private static int[] getCoordsFromString(String coords) {
