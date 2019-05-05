@@ -9,22 +9,28 @@ class Board {
     static final int CELL_SHOOT_MISS = -1;
     private static final int CELL_SHIP = 1;
     private static final int CELL_SHIP_HIT = 2;
-    private static final int BOARD_SIZE = 8;
+    private static final int BOARD_SIZE = 10;
     private int[][] board;
 
     Board() {
         board = new int[BOARD_SIZE][BOARD_SIZE];
         int[] shipsList = {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships length
         do {
-            initializeBoard(board);
+            initializeBoard(board, true);
         } while (!placeShips(board, shipsList));
+        initializeBoard(board, false); // clean unnecessary missed shoots
     }
 
-    private static void initializeBoard(int[][] board) {
+    private static void initializeBoard(int[][] board, boolean fullInitialise) {
         // fills the board with EMPTY_CELLs
+        // if fullInitialize is false, only changes CELL_SHOOT_MISS for CELL_EMPTY
         for (int i = 0; i < BOARD_SIZE; i++)
             for (int j = 0; j < BOARD_SIZE; j++)
-                board[i][j] = CELL_EMPTY;
+                if (fullInitialise)
+                    board[i][j] = CELL_EMPTY;
+                else
+                    if (board[i][j] == CELL_SHOOT_MISS)
+                        board[i][j] = CELL_EMPTY;
     }
 
     private static boolean placeShips(int[][] board, int[] shipsList) {
@@ -55,10 +61,10 @@ class Board {
                 return false;
             Random randomGenerator = new Random();
             ArrayList<String> ship = shipPlacements.get(randomGenerator.nextInt(shipPlacements.size()));
-            System.out.println("Ship selected: " + ship);
+            //System.out.println(shipPlacements);
+            //System.out.println("Ship selected: " + ship);
             placeShip(board, ship);
         }
-        //System.out.println(shipPlacements);
         return true;
     }
 
@@ -66,7 +72,29 @@ class Board {
         for (String coordsStr : ship) {
             int[] coords = getCoordsFromString(coordsStr);
             board[coords[0]][coords[1]] = CELL_SHIP;
+            surroundCellWithMissedShots(board, coords);
         }
+    }
+
+    private static void surroundCellWithMissedShots(int[][] board, int[] coords) {
+        // straights
+        if (coords[0] - 1 > -1 && board[coords[0] - 1][coords[1]] == CELL_EMPTY)
+            board[coords[0] - 1][coords[1]] = CELL_SHOOT_MISS;
+        if (coords[0] + 1 < board.length && board[coords[0] + 1][coords[1]] == CELL_EMPTY)
+            board[coords[0] + 1][coords[1]] = CELL_SHOOT_MISS;
+        if (coords[1] - 1 > -1 && board[coords[0]][coords[1] - 1] == CELL_EMPTY)
+            board[coords[0]][coords[1] - 1] = CELL_SHOOT_MISS;
+        if (coords[1] + 1 < board.length && board[coords[0]][coords[1] + 1] == CELL_EMPTY)
+            board[coords[0]][coords[1] + 1] = CELL_SHOOT_MISS;
+        // diagonals
+        if (coords[0] - 1 > -1 && coords[1] - 1 > -1 && board[coords[0] - 1][coords[1] - 1] == CELL_EMPTY)
+            board[coords[0] - 1][coords[1] - 1] = CELL_SHOOT_MISS;
+        if (coords[0] - 1 > -1 && coords[1] + 1 < board.length && board[coords[0] - 1][coords[1] + 1] == CELL_EMPTY)
+            board[coords[0] - 1][coords[1] + 1] = CELL_SHOOT_MISS;
+        if (coords[0] + 1 < board.length && coords[1] - 1 > -1 && board[coords[0] + 1][coords[1] - 1] == CELL_EMPTY)
+            board[coords[0] + 1][coords[1] - 1] = CELL_SHOOT_MISS;
+        if (coords[0] + 1 < board.length && coords[1] + 1 < board.length && board[coords[0] + 1][coords[1] + 1] == CELL_EMPTY)
+            board[coords[0] + 1][coords[1] + 1] = CELL_SHOOT_MISS;
     }
 
     private String getSymbolFromCellValue(int value, boolean showShips) {
@@ -80,11 +108,11 @@ class Board {
 
      String[] boardAsString(boolean showShips) {
         String[] boardStr = new String[BOARD_SIZE+1];
-        boardStr[0] = "   ";
+        boardStr[0] = "    ";
         for (int i = 0; i < BOARD_SIZE; i++)
             boardStr[0] += (char)('A' + i) + " ";
         for (int i = 1; i < BOARD_SIZE + 1; i++) {
-            boardStr[i] = i + "  ";
+            boardStr[i] = i + (i < 10 ? "   " : "  ");
             for (int j = 0; j < BOARD_SIZE; j++)
                 boardStr[i] += getSymbolFromCellValue(board[i-1][j], showShips) + " ";
         }
@@ -92,14 +120,15 @@ class Board {
     }
 
     private static String getCellAddress(int c0, int c1) {
-        return "" + (char)(c1 + 'A') + (char)(c0 + '1');
+        return "" + (char)(c1 + 'A') + (c0+1);
     }
 
     private static int[] getCoordsFromString(String coords) {
         int[] c = new int[2];
 
         c[1] = coords.charAt(0) - 'A';
-        c[0] = coords.charAt(1) - '1';
+        c[0] = Integer.parseInt(coords.substring(1)) - 1;
+//        System.out.println(coords + ", second coord: " + c[0]);
         return c;
     }
 
