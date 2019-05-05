@@ -10,11 +10,11 @@ class Board {
     private static final int CELL_SHIP = 1;
     private static final int CELL_SHIP_HIT = 2;
     private static final int BOARD_SIZE = 10;
+    private static final int[] shipsList = {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships lengths
     private int[][] board;
 
     Board() {
         board = new int[BOARD_SIZE][BOARD_SIZE];
-        int[] shipsList = {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships length
         do {
             initializeBoard(board, true);
         } while (!placeShips(board, shipsList));
@@ -128,7 +128,6 @@ class Board {
 
         c[1] = coords.charAt(0) - 'A';
         c[0] = Integer.parseInt(coords.substring(1)) - 1;
-//        System.out.println(coords + ", second coord: " + c[0]);
         return c;
     }
 
@@ -141,7 +140,7 @@ class Board {
         }
         return board[coords[0]][coords[1]];
     }
-
+/*
     static List<String> getEmptyCells(int[][] board) {
         ArrayList<String> freeCells = new ArrayList<String>();
 
@@ -152,7 +151,7 @@ class Board {
                 }
         return freeCells;
     }
-
+*/
     List<String> getShotableCells() {
         ArrayList<String> freeCells = new ArrayList<String>();
 
