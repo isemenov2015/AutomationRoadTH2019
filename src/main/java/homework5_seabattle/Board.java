@@ -59,8 +59,6 @@ class Board {
                 return false;
             Random randomGenerator = new Random();
             ArrayList<String> ship = shipPlacements.get(randomGenerator.nextInt(shipPlacements.size()));
-            //System.out.println(shipPlacements);
-            //System.out.println("Ship selected: " + ship);
             placeShip(board, ship);
         }
         return true;
