@@ -14,7 +14,7 @@ public class Game {
         Board humanBoard = new Board();
         Board computerBoard = new Board();
         Player humanPlayer = new Player("Your", humanBoard, new HumanInputStrategy(computerBoard));
-        Player computerPlayer = new Player("Computer", computerBoard, new ComputerRandomStrategy(humanBoard));
+        Player computerPlayer = new Player("Computer", computerBoard, new ComputerRandomImprovedStrategy(humanBoard));
         int counter = 0;
 
         while (true) {

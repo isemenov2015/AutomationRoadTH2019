@@ -6,10 +6,11 @@ class Board {
     private static final int CELL_EMPTY = 0;
     static final int CELL_SHOOT_MISS = -1;
     private static final int CELL_SHIP = 1;
-    private static final int CELL_SHIP_HIT = 2;
+    static final int CELL_SHIP_HIT = 2;
     private static final int BOARD_SIZE = 10;
     private static final int[] shipsList = {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships lengths
     private int[][] board;
+    private String previousShot = "";
 
     Board() {
         board = new int[BOARD_SIZE][BOARD_SIZE];
@@ -182,6 +183,7 @@ class Board {
                 break;
             }
         }
+        previousShot = shot;
         return board[coords[0]][coords[1]];
     }
 
@@ -207,5 +209,12 @@ class Board {
                     freeCells.add("" + (char) ('A' + i) + (j + 1));
                 }
         return freeCells;
+    }
+
+    String getPreviousShot() {return this.previousShot;}
+
+    int getCellValueByCellAddress(String address) {
+        int[] coords = getCoordsFromString(address);
+        return board[coords[0]][coords[1]];
     }
 }
