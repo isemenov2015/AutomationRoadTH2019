@@ -1,8 +1,6 @@
 package homework5_seabattle;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 class Board {
     private static final int CELL_EMPTY = 0;
@@ -97,6 +95,41 @@ class Board {
             board[coords[0] + 1][coords[1] + 1] = CELL_SHOOT_MISS;
     }
 
+    private static ArrayList<String> getFullShipFromCell(int[][] board, String cell) {
+        Stack<String> cellsStack = new Stack<String>();
+        ArrayList<String> ship = new ArrayList<String>();
+        Set<String> visited = new HashSet<String>();
+        cellsStack.push(cell);
+        while (!cellsStack.empty()) {
+            String newCell = cellsStack.pop();
+            ship.add(newCell);
+            visited.add(newCell);
+            int[] coords = getCoordsFromString(newCell);
+            int[] newCoords = new int[2];
+            newCoords[0] = coords[0] - 1;
+            newCoords[1] = coords[1];
+            if ((newCoords[0] > -1 && board[newCoords[0]][newCoords[1]] > CELL_EMPTY) &&
+                    !visited.contains(getCellAddress(newCoords[0], newCoords[1])))
+                cellsStack.add(getCellAddress(newCoords[0], newCoords[1]));
+            newCoords[0] = coords[0] + 1;
+            newCoords[1] = coords[1];
+            if ((newCoords[0] < board.length && board[newCoords[0]][newCoords[1]] > CELL_EMPTY) &&
+                !visited.contains(getCellAddress(newCoords[0], newCoords[1])))
+                cellsStack.add(getCellAddress(newCoords[0], newCoords[1]));
+            newCoords[0] = coords[0];
+            newCoords[1] = coords[1] - 1;
+            if ((newCoords[1] > -1 && board[newCoords[0]][newCoords[1]] > CELL_EMPTY) &&
+                    !visited.contains(getCellAddress(newCoords[0], newCoords[1])))
+                cellsStack.add(getCellAddress(newCoords[0], newCoords[1]));
+            newCoords[0] = coords[0];
+            newCoords[1] = coords[1] + 1;
+            if ((newCoords[1] < board.length && board[newCoords[0]][newCoords[1]] > CELL_EMPTY) &&
+                    !visited.contains(getCellAddress(newCoords[0], newCoords[1])))
+                cellsStack.add(getCellAddress(newCoords[0], newCoords[1]));
+        }
+        return ship;
+    }
+
     private String getSymbolFromCellValue(int value, boolean showShips) {
         switch (value) {
             case CELL_SHOOT_MISS: return "*";
@@ -136,7 +169,20 @@ class Board {
 
         switch (board[coords[0]][coords[1]]) {
             case CELL_EMPTY: board[coords[0]][coords[1]] = CELL_SHOOT_MISS; break;
-            case CELL_SHIP: board[coords[0]][coords[1]] = CELL_SHIP_HIT; break;
+            case CELL_SHIP: {
+                board[coords[0]][coords[1]] = CELL_SHIP_HIT;
+                boolean fullHit = true;
+                for (String cell : getFullShipFromCell(board, shot))
+                    if (board[getCoordsFromString(cell)[0]][getCoordsFromString(cell)[1]] != CELL_SHIP_HIT) {
+                        fullHit = false;
+                        break;
+                    }
+                if (fullHit) {  // put shots around ship that sunk
+                    for (String cell : getFullShipFromCell(board, shot))
+                        surroundCellWithMissedShots(board, getCoordsFromString(cell));
+                }
+                break;
+            }
         }
         return board[coords[0]][coords[1]];
     }

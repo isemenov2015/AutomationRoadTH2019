@@ -16,7 +16,7 @@ public class Game {
         Player humanPlayer = new Player("Your", humanBoard, new HumanInputStrategy(computerBoard));
         Player computerPlayer = new Player("Computer", computerBoard, new HumanInputStrategy(humanBoard));
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 15; i++) {
             printBoard(humanPlayer, computerPlayer);
             int shot = humanPlayer.shoot();
             if (shot != Board.CELL_SHOOT_MISS)
