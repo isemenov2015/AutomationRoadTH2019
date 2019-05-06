@@ -8,5 +8,6 @@ abstract class Strategy {
     }
 
     abstract String getNextMove();
+
     Board getBoard() {return board;}
 }
