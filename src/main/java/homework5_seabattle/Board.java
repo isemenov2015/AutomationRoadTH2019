@@ -94,7 +94,7 @@ class Board {
             board[coords[0] + 1][coords[1] + 1] = CELL_SHOOT_MISS;
     }
 
-    private static ArrayList<String> getFullShipFromCell(int[][] board, String cell) {
+    ArrayList<String> getFullShipFromCell(int[][] board, String cell) {
         Stack<String> cellsStack = new Stack<String>();
         ArrayList<String> ship = new ArrayList<String>();
         Set<String> visited = new HashSet<String>();
@@ -217,4 +217,21 @@ class Board {
         int[] coords = getCoordsFromString(address);
         return board[coords[0]][coords[1]];
     }
+
+    ArrayList<String> getShotableNeighborCells(String cell) {
+        ArrayList<String> neighbors = new ArrayList<String>();
+        int[] coords = getCoordsFromString(cell);
+
+        if (coords[0] - 1 > -1 && (board[coords[0] - 1][coords[1]] == CELL_EMPTY || board[coords[0] - 1][coords[1]] == CELL_SHIP))
+            neighbors.add(getCellAddress(coords[0] - 1, coords[1]));
+        if (coords[0] + 1 < board.length && (board[coords[0] + 1][coords[1]] == CELL_EMPTY || board[coords[0] + 1][coords[1]] == CELL_SHIP))
+            neighbors.add(getCellAddress(coords[0] + 1, coords[1]));
+        if (coords[1] - 1 > -1 && (board[coords[0]][coords[1] - 1] == CELL_EMPTY || board[coords[0]][coords[1] - 1] == CELL_SHIP))
+            neighbors.add(getCellAddress(coords[0], coords[1] - 1));
+        if (coords[1] + 1 < board.length && (board[coords[0]][coords[1] + 1] == CELL_EMPTY || board[coords[0]][coords[1] + 1] == CELL_SHIP))
+            neighbors.add(getCellAddress(coords[0], coords[1] + 1));
+        return neighbors;
+    }
+
+    int[][] getBoard() {return board;}
 }
