@@ -7,11 +7,13 @@ import java.util.Random;
 class ComputerRandomImprovedStrategy extends Strategy {
     private ArrayList<String> obligatoryMoves;
     private String prevSuccessfulMove;
+    private String firstSuccessfulMove;
 
     ComputerRandomImprovedStrategy(Board board) {
         super(board);
         obligatoryMoves = new ArrayList<String>();
         prevSuccessfulMove = "";
+        firstSuccessfulMove = "";
     }
 
     String getNextMove() {
@@ -19,7 +21,9 @@ class ComputerRandomImprovedStrategy extends Strategy {
         Random randomGenerator = new Random();
         String move = possibleMoves.get(randomGenerator.nextInt(possibleMoves.size()));
 
-        if (board.getCellValueByCellAddress(board.getPreviousShot()) == Board.CELL_SHIP_HIT) {
+        String prevShot = board.getPreviousShot();
+        if (prevShot.length() > 0 &&
+                board.getCellValueByCellAddress(prevShot) == Board.CELL_SHIP_HIT) {
             // previous shot has sunk the ship
             boolean shipSunk = true;
             ArrayList<String> ship = board.getFullShipFromCell(board.getBoard(), board.getPreviousShot());
@@ -35,7 +39,9 @@ class ComputerRandomImprovedStrategy extends Strategy {
             }
         }
 
-        if (board.getCellValueByCellAddress(board.getPreviousShot()) == Board.CELL_SHIP_HIT && prevSuccessfulMove.length() == 0) {
+        if (prevShot.length() > 0 &&
+                board.getCellValueByCellAddress(board.getPreviousShot()) == Board.CELL_SHIP_HIT &&
+                prevSuccessfulMove.length() == 0) {
             prevSuccessfulMove = board.getPreviousShot();
             obligatoryMoves = board.getShotableNeighborCells(prevSuccessfulMove);
             if (obligatoryMoves.size() > 0)
