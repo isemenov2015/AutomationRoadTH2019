@@ -8,14 +8,14 @@ class Board {
     private static final int CELL_SHIP = 1;
     private static final int CELL_SHIP_HIT = 2;
     private static final int BOARD_SIZE = 10;
-    private static final int[] shipsList = {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships lengths
+    private static final int[] shipsList = {9}; //{4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships lengths
     private int[][] board;
 
     Board() {
         board = new int[BOARD_SIZE][BOARD_SIZE];
         do {
             initializeBoard(board, true);
-        } while (!placeShips(board, shipsList));
+        } while (!placeShips(board));
         initializeBoard(board, false); // clean unnecessary missed shoots
     }
 
@@ -31,7 +31,7 @@ class Board {
                         board[i][j] = CELL_EMPTY;
     }
 
-    private static boolean placeShips(int[][] board, int[] shipsList) {
+    private static boolean placeShips(int[][] board) {
         // randomly places ships on an empty board
         for (int shipLength : shipsList) {
             ArrayList<ArrayList<String>> shipPlacements = new ArrayList<ArrayList<String>>();
@@ -186,18 +186,6 @@ class Board {
         }
         return board[coords[0]][coords[1]];
     }
-/*
-    static List<String> getEmptyCells(int[][] board) {
-        ArrayList<String> freeCells = new ArrayList<String>();
-
-        for (int i = 0; i < BOARD_SIZE; i++)
-            for (int j = 0; j < BOARD_SIZE; j++)
-                if (board[j][i] == CELL_EMPTY) {
-                    freeCells.add("" + (char) ('A' + i) + (j + 1));
-                }
-        return freeCells;
-    }
-*/
 
     boolean gameOver() {
         int totalShipCells = 0;
@@ -205,9 +193,9 @@ class Board {
 
         for (int tCells : shipsList)
             totalShipCells += tCells;
-        for (int i = 0; i < board.length; ++i)
-            for (int j = 0; j < board.length; j++)
-                if (board[i][j] == CELL_SHIP_HIT)
+        for (int[] row : board)
+            for (int cell : row)
+                if (cell == CELL_SHIP_HIT)
                     totalHitCells++;
         return totalHitCells == totalShipCells;
     }
