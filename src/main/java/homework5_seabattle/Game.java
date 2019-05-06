@@ -14,20 +14,23 @@ public class Game {
         Board humanBoard = new Board();
         Board computerBoard = new Board();
         Player humanPlayer = new Player("Your", humanBoard, new HumanInputStrategy(computerBoard));
-        Player computerPlayer = new Player("Computer", computerBoard, new HumanInputStrategy(humanBoard));
+        Player computerPlayer = new Player("Computer", computerBoard, new ComputerRandomStrategy(humanBoard));
+        int counter = 0;
 
-        for (int i = 0; i < 100; i++) {
+        while (true) {
+            Player currentPlayer = counter % 2 == 0 ? humanPlayer : computerPlayer;
             printBoard(humanPlayer, computerPlayer);
-            int shot = humanPlayer.shoot();
+            int shot = currentPlayer.shoot();
             if (shot != Board.CELL_SHOOT_MISS)
                 System.out.println("Hit!");
-            if (humanPlayer.isWinner() || computerPlayer.isWinner())
+            if (currentPlayer.isWinner())
                 break;
+            counter++;
         }
         printBoard(humanPlayer, computerPlayer);
         if (humanPlayer.isWinner())
             System.out.println("You won!");
         else
-            System.out.printf("Computer won!");
+            System.out.println("Computer won!");
     }
 }

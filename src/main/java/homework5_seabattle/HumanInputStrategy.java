@@ -25,6 +25,4 @@ class HumanInputStrategy extends Strategy {
         }
         return move;
     }
-
-    Board getBoard() {return board;}
 }
