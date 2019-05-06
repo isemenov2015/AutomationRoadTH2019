@@ -9,7 +9,6 @@ class ComputerRandomStrategy extends Strategy {
         super(board);
     }
 
-    @Override
     String getNextMove() {
         List<String> possibleMoves = board.getShotableCells();
         Random randomGenerator = new Random();
