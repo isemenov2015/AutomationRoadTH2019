@@ -8,7 +8,7 @@ class Board {
     private static final int CELL_SHIP = 1;
     private static final int CELL_SHIP_HIT = 2;
     private static final int BOARD_SIZE = 10;
-    private static final int[] shipsList = {9}; //{4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships lengths
+    private static final int[] shipsList = {4, 3, 3, 2, 2, 2, 1, 1, 1, 1}; // list of ships lengths
     private int[][] board;
 
     Board() {
