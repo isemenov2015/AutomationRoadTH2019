@@ -198,6 +198,20 @@ class Board {
         return freeCells;
     }
 */
+
+    boolean gameOver() {
+        int totalShipCells = 0;
+        int totalHitCells = 0;
+
+        for (int tCells : shipsList)
+            totalShipCells += tCells;
+        for (int i = 0; i < board.length; ++i)
+            for (int j = 0; j < board.length; j++)
+                if (board[i][j] == CELL_SHIP_HIT)
+                    totalHitCells++;
+        return totalHitCells == totalShipCells;
+    }
+
     List<String> getShotableCells() {
         ArrayList<String> freeCells = new ArrayList<String>();
 

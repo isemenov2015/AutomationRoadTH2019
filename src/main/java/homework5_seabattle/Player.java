@@ -18,4 +18,5 @@ class Player {
         return board;
     }
     String getName() {return this.name;}
+    Boolean isWinner() {return strategy.getBoard().gameOver();}
 }
