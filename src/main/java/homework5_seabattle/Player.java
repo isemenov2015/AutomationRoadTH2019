@@ -12,7 +12,9 @@ class Player {
     }
 
     int shoot() {
-        return strategy.getBoard().shoot(strategy.getNextMove());
+        String move = strategy.getNextMove();
+        System.out.println(name + " move: " + move);
+        return strategy.getBoard().shoot(move);
     }
     Board getBoard() {
         return board;

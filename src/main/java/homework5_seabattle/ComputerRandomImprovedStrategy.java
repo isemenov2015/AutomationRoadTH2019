@@ -6,13 +6,11 @@ import java.util.Random;
 
 class ComputerRandomImprovedStrategy extends Strategy {
     private ArrayList<String> obligatoryMoves;
-    private String prevSuccessfulMove;
     private String firstSuccessfulMove;
 
     ComputerRandomImprovedStrategy(Board board) {
         super(board);
         obligatoryMoves = new ArrayList<String>();
-        prevSuccessfulMove = "";
         firstSuccessfulMove = "";
     }
 
@@ -33,24 +31,87 @@ class ComputerRandomImprovedStrategy extends Strategy {
                     break;
                 }
             if (shipSunk) {
-                prevSuccessfulMove = "";
+                firstSuccessfulMove = "";
                 obligatoryMoves = new ArrayList<String>();
                 return move;
             }
         }
 
         if (prevShot.length() > 0 &&
-                board.getCellValueByCellAddress(board.getPreviousShot()) == Board.CELL_SHIP_HIT &&
-                prevSuccessfulMove.length() == 0) {
-            prevSuccessfulMove = board.getPreviousShot();
-            obligatoryMoves = board.getShotableNeighborCells(prevSuccessfulMove);
-            if (obligatoryMoves.size() > 0)
-                return obligatoryMoves.get(randomGenerator.nextInt(obligatoryMoves.size()));
-            else
+                board.getCellValueByCellAddress(prevShot) == Board.CELL_SHIP_HIT &&
+                firstSuccessfulMove.length() == 0) {
+            firstSuccessfulMove = board.getPreviousShot();
+            obligatoryMoves = board.getShotableNeighborCells(prevShot);
+            if (obligatoryMoves.size() > 0) {
+                String mv = obligatoryMoves.get(randomGenerator.nextInt(obligatoryMoves.size()));
+                obligatoryMoves.remove(mv);
+                return mv;
+            }
+            else {
+                firstSuccessfulMove = "";
+                obligatoryMoves = new ArrayList<String>();
                 return move;
+            }
         }
 
-        System.out.println("Computer moves: " + move);
+        if (prevShot.length() > 0 &&
+                board.getCellValueByCellAddress(prevShot) == Board.CELL_SHOOT_MISS &&
+                firstSuccessfulMove.length() > 0) {
+            if (obligatoryMoves.size() > 0) {
+                String mv = obligatoryMoves.get(randomGenerator.nextInt(obligatoryMoves.size()));
+                obligatoryMoves.remove(mv);
+                return mv;
+            }
+            else {
+                firstSuccessfulMove = "";
+                obligatoryMoves = new ArrayList<String>();
+                return move;
+            }
+        }
+
+        if (prevShot.length() > 0 &&
+                board.getCellValueByCellAddress(prevShot) == Board.CELL_SHIP_HIT &&
+                firstSuccessfulMove.length() > 0) {
+            obligatoryMoves.clear();
+            if (firstSuccessfulMove.charAt(0) == prevShot.charAt(0)) {
+                int minRowNum = Math.min(Integer.parseInt(prevShot.substring(1)), Integer.parseInt(firstSuccessfulMove.substring(1)));
+                int maxRowNum = Math.max(Integer.parseInt(prevShot.substring(1)), Integer.parseInt(firstSuccessfulMove.substring(1)));
+                if (minRowNum - 1 > -1) {
+                    String addr = firstSuccessfulMove.substring(0, 1) + (minRowNum - 1);
+                    if (board.getCellValueByCellAddress(addr) == Board.CELL_EMPTY || board.getCellValueByCellAddress(addr) == Board.CELL_SHIP)
+                        obligatoryMoves.add(addr);
+                }
+                if (maxRowNum + 1 < board.getBoard().length) {
+                    String addr = firstSuccessfulMove.substring(0, 1) + (maxRowNum + 1);
+                    if (board.getCellValueByCellAddress(addr) == Board.CELL_EMPTY || board.getCellValueByCellAddress(addr) == Board.CELL_SHIP)
+                        obligatoryMoves.add(addr);
+                }
+            }
+            else {
+                char minColChar = (char) Math.min((int) prevShot.charAt(0), (int) firstSuccessfulMove.charAt(0));
+                char maxColChar = (char) Math.max((int) prevShot.charAt(0), (int) firstSuccessfulMove.charAt(0));
+                if (minColChar - 'A' - 1 > -1) {
+                    String addr = (char) (minColChar - 1) + firstSuccessfulMove.substring(1);
+                    if (board.getCellValueByCellAddress(addr) == Board.CELL_EMPTY || board.getCellValueByCellAddress(addr) == Board.CELL_SHIP)
+                        obligatoryMoves.add(addr);
+                }
+                if (maxColChar + 1 - 'A' < board.getBoard().length) {
+                    String addr = (char) (maxColChar + 1) + firstSuccessfulMove.substring(1);
+                    if (board.getCellValueByCellAddress(addr) == Board.CELL_EMPTY || board.getCellValueByCellAddress(addr) == Board.CELL_SHIP)
+                        obligatoryMoves.add(addr);
+                }
+            }
+            if (obligatoryMoves.size() > 0) {
+                String mv = obligatoryMoves.get(randomGenerator.nextInt(obligatoryMoves.size()));
+                obligatoryMoves.remove(mv);
+                return mv;
+            }
+            else {
+                firstSuccessfulMove = "";
+                obligatoryMoves = new ArrayList<String>();
+                return move;
+            }
+        }
         return move;
     }
 }
