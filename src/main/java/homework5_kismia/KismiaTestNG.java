@@ -25,8 +25,8 @@ public class KismiaTestNG {
 
     @BeforeTest
     public void setUp() {
-        //System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/chromedriver");
-        System.setProperty("webdriver.chrome.driver", "e:/chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "e:/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://kismia.com");
     }
