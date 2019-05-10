@@ -49,21 +49,33 @@ public class PPReportDownload {
         driver.findElement(By.xpath("//*[@name='login_password']")).sendKeys(password);
         driver.findElement(By.xpath("//*[@name='login_password']")).sendKeys(Keys.RETURN);
 
-        // wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-testid='navigation_transactions']")));
-        Thread.sleep(2000);
+        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-testid='navigation_transactions']")));
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//*[@data-testid='navigation_transactions']")).click();
 
-        // wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@class, 'rowClick redirect')]")));
-        Thread.sleep(2000);
+        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@class, 'rowClick redirect')]")));
+        Thread.sleep(5000);
         List<WebElement> dropdownMenuList = driver.findElements(By.xpath("//*[contains(@class, 'paypal-react-dropdown-component')]"));
         dropdownMenuList.get(2).click();
 
-        Thread.sleep(2000);
+        Thread.sleep(500);
         //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='Balance affecting']")));
         driver.findElement(By.xpath("//*[@title='Balance affecting']")).click();
 
-        Thread.sleep(1000);
+        Thread.sleep(5000);
+        dropdownMenuList.get(4).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@data-duration='90']")).click();
 
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[contains(@class, 'downloadTrigger')]/a")).click();
+
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//*[contains(@class, 'react-dropdown')]")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[contains(@title, '3 month')]")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@id='dlogSubmit']")).click();
         driver.close();
     }
 }
