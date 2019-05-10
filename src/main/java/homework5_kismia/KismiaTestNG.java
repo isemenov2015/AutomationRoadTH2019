@@ -46,7 +46,7 @@ public class KismiaTestNG {
         Assert.assertEquals(driver.getTitle(), "Kismia");
     }
 
-    @Test(dependsOnMethods = {"loginTest"}, enabled = false)
+    @Test(dependsOnMethods = {"loginTest"})
     public void messageTest() {
         Random randomGenerator = new Random();
         int randomKey = randomGenerator.nextInt(1000000);
@@ -69,6 +69,27 @@ public class KismiaTestNG {
 
     @Test(dependsOnMethods = {"loginTest"})
     public void ageChangeTest() {
+        driver.findElement(By.xpath("//*[contains(@class, 'icon--header-sub--improve')]")).click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@href, '/profile/settings')]")));
+        driver.findElement(By.xpath("//*[contains(@href, '/profile/settings')]")).click();
 
+        List<WebElement> elementsList = driver.findElements(By.xpath("//*[contains(@class, 'settings-nav__a')]"));
+        elementsList.get(1).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='year']")));
+        driver.findElement(By.xpath("//*[@id='year']")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@value='1985']")));
+
+        Random randomGenerator = new Random();
+        String birthYear = String.valueOf(2018 - 21 - randomGenerator.nextInt(15));
+        driver.findElement(By.xpath("//*[@value='" + birthYear + "']")).click();
+
+        String buttonXPath = "//*[contains(@class, 'button--flat-green js_save')]";
+        driver.findElement(By.xpath(buttonXPath)).click();
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(buttonXPath)));
+
+        WebElement button = driver.findElement(By.xpath(buttonXPath));
+        Assert.assertFalse(button.isDisplayed());
     }
 }
