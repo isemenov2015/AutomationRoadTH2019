@@ -11,6 +11,8 @@ public class LoginPage {
     private By emailFid = By.cssSelector("#user");
     private By passwordFid = By.cssSelector("#password");
     private By loginBtn = By.cssSelector("#login");
+    private By logoutBtn = By.cssSelector(".member-initials");
+    private By logoutMenuItem = By.xpath("//*[contains(@class, 'js-logout')]");
 
     public void open() {
         driver.get("https://trello.com/login");
@@ -23,5 +25,12 @@ public class LoginPage {
         driver.findElement(passwordFid).sendKeys(password);
         driver.findElement(loginBtn).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
+    }
+
+    public void logout() {
+        driver.findElement(logoutBtn).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(logoutMenuItem));
+        driver.findElement(logoutMenuItem).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/logged-out"));
     }
 }
