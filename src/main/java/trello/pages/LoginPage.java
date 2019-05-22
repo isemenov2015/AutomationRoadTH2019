@@ -22,6 +22,6 @@ public class LoginPage {
         driver.findElement(passwordFid).clear();
         driver.findElement(passwordFid).sendKeys(password);
         driver.findElement(loginBtn).click();
-        new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/ilyasemenov11/boards"));
+        new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
     }
 }

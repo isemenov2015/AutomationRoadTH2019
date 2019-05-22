@@ -14,7 +14,7 @@ public class LoginTest extends BrowserFactory {
         LoginPage loginPage = new LoginPage();
 
         loginPage.open();
-        loginPage.login("ios@gmail.com", "somepassword");
-        Assert.assertTrue(driver.getTitle().contains("Boards"));
+        loginPage.login("sumigoxuci@mailsource.info", "werter321");
+        Assert.assertTrue(driver.getTitle().contains("|"));
     }
 }
