@@ -23,6 +23,18 @@ public class LoginTest extends BrowserFactory {
     }
 
     @Test(dependsOnMethods = {"createBoard"})
+    public void makeBoardPublic() {
+        loginPage.makeBoardPublic(LoginPage.TEST_BOARD_NAME);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://trello.com/johantestoff/boards");
+    }
+
+    @Test(dependsOnMethods = {"makeBoardPublic"})
+    public void makeBoardPrivate() {
+        loginPage.makeBoardPrivate(LoginPage.TEST_BOARD_NAME);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://trello.com/johantestoff/boards");
+    }
+
+    @Test(dependsOnMethods = {"makeBoardPrivate"})
     public void deleteBoard() {
         loginPage.deleteBoard(LoginPage.TEST_BOARD_NAME);
         Assert.assertEquals(driver.getCurrentUrl(), "https://trello.com/johantestoff/boards");

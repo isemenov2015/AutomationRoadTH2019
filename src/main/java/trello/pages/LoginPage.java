@@ -24,6 +24,12 @@ public class LoginPage {
     private By closeBoardConfirmButton = By.xpath("//*[contains(@class, 'js-confirm full negate')]");
     private By deleteBoardConfirmLink = By.xpath("//*[contains(@class, 'quiet js-delete')]");
     private By noBoardAvailable = By.xpath("//*[contains(@tabindex, '-1')]");
+    private By permissionSwitcherMenu = By.xpath("//*[contains(@id, 'permission')]");
+    private By switchBoardPublic = By.xpath("//*[contains(@name, 'public')]");
+    private By switchBoardPrivate = By.xpath("//*[contains(@name, 'private')]");
+    private By makeBoardPublicConfirmButton = By.xpath("//*[contains(@class, 'make-public')]");
+    private By iconBoardIsPublic = By.xpath("//*[contains(@class, 'icon-sm icon-public')]");
+    private By iconBoardIsPrivate = By.xpath("//*[contains(@class, 'icon-sm icon-private')]");
 
     public void open() {
         driver.get("https://trello.com/login");
@@ -45,6 +51,34 @@ public class LoginPage {
         new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(createBoardButton));
         driver.findElement(createBoardButton).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.titleContains(boardName));
+        driver.findElement(homeIcon).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
+    }
+
+    public void makeBoardPublic(String boardName) {
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(locateBoard));
+        driver.findElement(locateBoard).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(permissionSwitcherMenu));
+        driver.findElement(permissionSwitcherMenu).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(switchBoardPublic));
+        driver.findElement(switchBoardPublic).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(makeBoardPublicConfirmButton));
+        driver.findElement(makeBoardPublicConfirmButton).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(iconBoardIsPublic));
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(homeIcon));
+        driver.findElement(homeIcon).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
+    }
+
+    public void makeBoardPrivate(String boardName) {
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(locateBoard));
+        driver.findElement(locateBoard).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(permissionSwitcherMenu));
+        driver.findElement(permissionSwitcherMenu).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(switchBoardPrivate));
+        driver.findElement(switchBoardPrivate).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(iconBoardIsPrivate));
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(homeIcon));
         driver.findElement(homeIcon).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
     }
