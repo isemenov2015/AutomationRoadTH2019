@@ -25,7 +25,7 @@ public class LoginTest extends BrowserFactory {
     @Test(dependsOnMethods = {"createBoard"})
     public void deleteBoard() {
         loginPage.deleteBoard(LoginPage.TEST_BOARD_NAME);
-        Assert.assertTrue(driver.getCurrentUrl().equals("https://trello.com/johantestoff/boards"));
+        Assert.assertEquals(driver.getCurrentUrl(), "https://trello.com/johantestoff/boards");
     }
 
     @Test(dependsOnMethods = {"deleteBoard"})
