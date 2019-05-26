@@ -8,11 +8,22 @@ import static core.BrowserFactory.driver;
 
 public class LoginPage {
 
+    public static final String TEST_BOARD_NAME = "TestBoard";
     private By emailFid = By.cssSelector("#user");
     private By passwordFid = By.cssSelector("#password");
     private By loginBtn = By.cssSelector("#login");
     private By logoutBtn = By.cssSelector(".member-initials");
     private By logoutMenuItem = By.xpath("//*[contains(@class, 'js-logout')]");
+    private By newBoardCreate = By.cssSelector(".board-tile.mod-add");
+    private By boardNameInput = By.cssSelector("input.subtle-input");
+    private By createBoardButton = By.xpath("//*[contains(@type, 'submit')]");
+    private By locateBoard = By.xpath("//*[contains(@title, '" + TEST_BOARD_NAME + "') and contains(@dir, 'auto')]");
+    private By homeIcon = By.xpath("//*[contains(@class, 'icon-house')]");
+    private By moreItemsBoardMenuItem = By.xpath("//*[contains(@class, 'js-open-more')]");
+    private By closeBoardMenuElement = By.xpath("//*[contains(@class, 'js-close-board')]");
+    private By closeBoardConfirmButton = By.xpath("//*[contains(@class, 'js-confirm full negate')]");
+    private By deleteBoardConfirmLink = By.xpath("//*[contains(@class, 'quiet js-delete')]");
+    private By noBoardAvailable = By.xpath("//*[contains(@tabindex, '-1')]");
 
     public void open() {
         driver.get("https://trello.com/login");
@@ -25,6 +36,36 @@ public class LoginPage {
         driver.findElement(passwordFid).sendKeys(password);
         driver.findElement(loginBtn).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
+    }
+
+    public void createBoard(String boardName) {
+        driver.findElement(newBoardCreate).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(boardNameInput));
+        driver.findElement(boardNameInput).sendKeys(boardName);
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(createBoardButton));
+        driver.findElement(createBoardButton).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.titleContains(boardName));
+        driver.findElement(homeIcon).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
+    }
+
+    public void deleteBoard(String boardName) {
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(locateBoard));
+        driver.findElement(locateBoard).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.titleContains(boardName));
+        driver.findElement(moreItemsBoardMenuItem).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(closeBoardMenuElement));
+        driver.findElement(closeBoardMenuElement).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(closeBoardConfirmButton));
+        driver.findElement(closeBoardConfirmButton).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(deleteBoardConfirmLink));
+        driver.findElement(deleteBoardConfirmLink).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(closeBoardConfirmButton));
+        driver.findElement(closeBoardConfirmButton).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(noBoardAvailable));
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(homeIcon));
+        driver.findElement(homeIcon).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(newBoardCreate));
     }
 
     public void logout() {
