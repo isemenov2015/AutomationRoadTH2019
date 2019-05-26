@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static core.BrowserFactory.driver;
 
-public class LoginPage {
+public class TrelloBoardPage {
 
     public static final String TEST_BOARD_NAME = "TestBoard";
     private By emailFid = By.cssSelector("#user");
@@ -30,6 +30,7 @@ public class LoginPage {
     private By makeBoardPublicConfirmButton = By.xpath("//*[contains(@class, 'make-public')]");
     private By iconBoardIsPublic = By.xpath("//*[contains(@class, 'icon-sm icon-public')]");
     private By iconBoardIsPrivate = By.xpath("//*[contains(@class, 'icon-sm icon-private')]");
+    private By iconStarFavorites = By.xpath("//*[contains(@class, 'icon-star board-header')]");
 
     public void open() {
         driver.get("https://trello.com/login");
@@ -78,6 +79,16 @@ public class LoginPage {
         new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(switchBoardPrivate));
         driver.findElement(switchBoardPrivate).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(iconBoardIsPrivate));
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(homeIcon));
+        driver.findElement(homeIcon).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
+    }
+
+    public void makeBoardFavorite(String boardName) {
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(locateBoard));
+        driver.findElement(locateBoard).click();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(iconStarFavorites));
+        driver.findElement(iconStarFavorites).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(homeIcon));
         driver.findElement(homeIcon).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/johantestoff/boards"));
