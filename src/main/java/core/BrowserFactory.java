@@ -10,8 +10,8 @@ public class BrowserFactory {
 
     @BeforeSuite
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "e:/chromedriver/chromedriver.exe");
-        //System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "e:/chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/ilyasemenov/Chromedriver/chromedriver");
         driver = new ChromeDriver();
     }
 
