@@ -1,4 +1,4 @@
-package homework6;
+package homework6_set_simple;
 
 /* Множество всех животных
 1. Внутри класса Solution создать public static классы Cat, Dog.
