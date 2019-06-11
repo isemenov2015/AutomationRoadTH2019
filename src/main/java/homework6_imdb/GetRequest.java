@@ -41,6 +41,6 @@ public class GetRequest {
         }
         System.out.println("Total movies parsed: " + movies.size());
         for (Movie movie : movies)
-            System.out.println(movie.title);
+            System.out.println(movie.getTitle());
     }
 }
