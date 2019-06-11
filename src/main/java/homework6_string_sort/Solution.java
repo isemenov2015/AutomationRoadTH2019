@@ -64,7 +64,7 @@ public class Solution {
         });
         Collections.sort(numbersList, new Comparator<String>() {
             public int compare(String s1, String s2) {
-                if (!isGreaterThan(s1, s2))
+                if (Integer.parseInt(s1) < Integer.parseInt(s2))
                     return 1;
                 else
                     return -1;
