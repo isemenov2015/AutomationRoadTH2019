@@ -46,7 +46,6 @@ public class Solution {
     }
 
     public static void sort(String[] array) {
-        String[] sortedArray = new String[array.length];
         LinkedList<String> stringsList = new LinkedList<String>();
         LinkedList<String> numbersList = new LinkedList<String>();
         for (String element : array) {
@@ -73,11 +72,9 @@ public class Solution {
         });
         for (int i = 0; i < array.length; i++)
             if (isNumber(array[i]))
-                sortedArray[i] = numbersList.pop();
+                array[i] = numbersList.pop();
             else
-                sortedArray[i] = stringsList.pop();
-        for (int i = 0; i < array.length; i++)
-            array[i] = sortedArray[i];
+                array[i] = stringsList.pop();
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'
