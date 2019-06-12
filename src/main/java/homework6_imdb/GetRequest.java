@@ -18,8 +18,11 @@ public class GetRequest {
 
     @Test
     public void imdbRequest() throws IOException {
+        String imdbURL = "https://www.imdb.com/chart/top";
+        String movieDomain = "https://www.imdb.com";
+
         OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder().url("https://www.imdb.com/chart/top").build();
+        Request request = new Request.Builder().url(imdbURL).build();
         Response response = client.newCall(request).execute();
         String html = response.body().string();
         List<Movie> movies = new ArrayList<Movie>();
@@ -27,12 +30,38 @@ public class GetRequest {
         Elements elements = document.select(".lister-list tr");
         int counter = 0;
         for (Element element : elements) {
+            //title
             String title = element.select(".titleColumn a").text();
+            //rating
             double rating = Double.parseDouble(element.select(".imdbRating strong").text());
+            //year
             int year = Integer.parseInt(element.select(".secondaryInfo")
                     .text()
                     .replaceAll("\\(", "")
                     .replaceAll("\\)", ""));
+            //pull movie page
+            String movieURL = movieDomain + element.select(".titleColumn a").attr("href");
+            request = new Request.Builder().url(movieURL).build();
+            response = client.newCall(request).execute();
+            html = response.body().string();
+            document = Jsoup.parse(html);
+            //metascore
+            String tmpString = document.select(".metacriticScore").text();
+            double metascore = 0;
+            if (tmpString.length() > 0)
+                metascore = Double.parseDouble(tmpString);
+            //time
+            tmpString = document.select(".title_wrapper div").select("time").text();
+            if (tmpString.indexOf("h") < 0)
+                tmpString = "0h " + tmpString;
+            if (tmpString.indexOf("min") < 0)
+                tmpString += " 0min";
+            String hours = tmpString.split(" ")[0].replaceAll("h", "");
+            String minutes = tmpString.split(" ")[1].replaceAll("min", "");
+            int duration = Integer.parseInt(hours) * 60 + Integer.parseInt(minutes);
+            //director
+            //tmpString = document.select(".plot_summary_wrapper div").select("href").text();
+            System.out.println(document.select(".plot_summary_wrapper div").attr("href"));
 
             movies.add(new Movie(rating, title, year));
             counter++;
