@@ -7,7 +7,6 @@ public class Movie {
     private double metascore;
     private String director;
     private List<String> actors;
-    private List<String> genres;
     private String title;
     private int year;
     private int duration;
@@ -18,14 +17,13 @@ public class Movie {
         this.year = year;
     }
 
-    public Movie(double score, String title, int year, double metascore, String director, List<String> actors, List<String> genres, int duration) {
+    public Movie(double score, String title, int year, double metascore, String director, List<String> actors, int duration) {
         this.score = score;
         this.title = title;
         this.year = year;
         this.metascore = metascore;
         this.director = director;
         this.actors = actors;
-        this.genres = genres;
         this.duration = duration;
     }
 
@@ -43,10 +41,6 @@ public class Movie {
 
     public List<String> getActors() {
         return actors;
-    }
-
-    public List<String> getGenres() {
-        return genres;
     }
 
     public String getTitle() {
