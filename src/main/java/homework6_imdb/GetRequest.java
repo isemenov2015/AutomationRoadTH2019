@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class GetRequest {
-    private static final int NUMBER_OF_MOVIES_TO_PROCESS = 250;
+    private static final int NUMBER_OF_MOVIES_TO_PROCESS = 10;
 
     @Test
     public void imdbRequest() throws IOException {
