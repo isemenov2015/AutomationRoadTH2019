@@ -61,7 +61,7 @@ public class GetRequest {
             int duration = Integer.parseInt(hours) * 60 + Integer.parseInt(minutes);
             //director
             //tmpString = document.select(".plot_summary_wrapper div").select("href").text();
-            System.out.println(document.select(".plot_summary_wrapper div").attr("href"));
+            System.out.println("Director: " + document.select(".plot_summary_wrapper a"));
 
             movies.add(new Movie(rating, title, year));
             counter++;
