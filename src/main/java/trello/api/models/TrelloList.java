@@ -5,4 +5,14 @@ public class TrelloList {
     public String name;
     public boolean closed;
     public String idBoard;
+
+    @Override
+    public String toString() {
+        return "TrelloList{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", closed=" + closed +
+                ", idBoard='" + idBoard + '\'' +
+                '}';
+    }
 }

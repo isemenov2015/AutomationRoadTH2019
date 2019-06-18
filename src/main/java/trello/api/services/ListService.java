@@ -1,5 +1,5 @@
 package trello.api.services;
 
-public interface ListServices {
+public interface ListService {
 
 }
