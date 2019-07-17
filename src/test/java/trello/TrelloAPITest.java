@@ -21,7 +21,7 @@ public class TrelloAPITest {
             Card card = new Card();
             card.name = "Card: " + tList.name;
             card.desc = "Awesome card";
-            trelloApi.createCard(tList.id);
+            //trelloApi.createCard(tList.id);
             // System.out.println(tList.name);
         }
     }

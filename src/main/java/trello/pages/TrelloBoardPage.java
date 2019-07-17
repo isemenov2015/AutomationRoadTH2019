@@ -119,4 +119,11 @@ public class TrelloBoardPage {
         driver.findElement(logoutMenuItem).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.urlToBe("https://trello.com/logged-out"));
     }
+
+    public void bark(String b) {
+        System.out.println(b);
+    }
+    public void bark() {
+        System.out.println("Bark");
+    }
 }

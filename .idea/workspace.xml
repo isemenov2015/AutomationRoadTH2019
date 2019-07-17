@@ -1,0 +1,1517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c110d0d5-47c6-400d-aa82-e3908e1c3b6d" name="Default Changelist" comment="First commit">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/SecondExamPart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/StudentProcessing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/TwoVariablesClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pp_payments_report/credentials.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/AutomationRoadTH2019.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/core/BrowserFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/core/DriverEventListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework1/DigitsSum2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework1/DigitsSum3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework1/DivisionRemainder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework1/FacebookLoginCheck.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework1/RoundFloat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework2/Akinator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework2/CountNumberOfSeats.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework2/ExchangeRates.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework2/GetFilmShawshankRedemptionProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework3/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework3/HumanInputStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework3/MinimaxStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework3/Player.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework3/QuickSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework3/RandomStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework3/Strategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework3/TicTacToe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework4/CountAInString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework4/ExchangeRatesString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework4_fbbirthday/FBBirthdayGreetings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_kismia/KismiaTestNG.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_roze/FBRoZeCount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_seabattle/Board.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_seabattle/ComputerRandomImprovedStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_seabattle/ComputerRandomStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_seabattle/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_seabattle/HumanInputStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_seabattle/Player.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework5_seabattle/Strategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_cats/Solution$Cat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_cats/Solution.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_collections_get_min/Solution.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_collections_hand_input/Solution$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_collections_hand_input/Solution.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_imdb/GetRequest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_imdb/GetRequest$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_imdb/GetRequest$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_imdb/GetRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_imdb/Movie.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_set_simple/Solution$Cat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_set_simple/Solution$Dog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_set_simple/Solution.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_string_sort/Solution$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_string_sort/Solution$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homework6_string_sort/Solution.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson10/ExceptionExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson10/ExceptionMultiplyCatch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson10/FinallyAfterReturn.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson10/ThrowExceptionExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson12/Dog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson12/GoogleSearch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson12/Pet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson12/SearchForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson12/TreeSetExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson12/UseDog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson14/GetRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson14/Movie14.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson14/MovieScoreComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson14/MovieTitlesComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson14/MovieYearComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson14/SortExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson2/IntCharConversion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson2/TypeConversion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson4/PrintMinAndMaxOf5Numbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson4/PrintMinimumOf4Ints.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson4/PrintNumberOfMaximumInts.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson4/PrintSeason.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson4/PrintSimilarNames.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson5/BrowserFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson5/DriverImplicitWaits.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson5/ShowAladdinCinemaMovies.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson6/ArrayMinMax.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson6/ArrayToString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson6/ArraysBuiltinSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson6/ArraysExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson6/ArraysLoopExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson6/BubbleSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson6/IncrementExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson6/PrintAllCharsFromArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson7/Box.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson7/CheckPalindrom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson7/MainForBox.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson7/StringIsImmutable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson7/StringParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson8/AnnotationsExampleTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson8/CustomListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson8/GeneralTestDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/lesson8/TestNGHelloWorld.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pp_payments_report/PPReportDownload.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/GsonExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/TrelloApi$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/TrelloApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/TrelloRestClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/interceptors/TrelloAuthInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/models/Board.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/models/Card.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/models/TrelloList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/api/services/BoardService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/trello/pages/TrelloBoardPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/META-INF/AutomationRoadTH2019.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/trello/TrelloAPITest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/trello/TrelloTestBundle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trello/pages/TrelloBoardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trello/pages/TrelloBoardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/trello/TrelloAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/trello/TrelloAPITest.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/TwoVariablesClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="1" lean-forward="true" selection-start-line="2" selection-end-line="28" selection-end-column="1" />
+              <folding>
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework3/QuickSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework3/HumanInputStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework6_collections_hand_input/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework6_cats/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#936#937#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="91" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/StudentProcessing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="781">
+              <caret line="62" selection-start-line="4" selection-end-line="62" />
+              <folding>
+                <element signature="e#448#457#0" expanded="true" />
+                <element signature="e#653#908#0" expanded="true" />
+                <element signature="e#907#908#0" expanded="true" />
+                <element signature="e#1381#1401#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework6_collections_get_min/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework6_string_sort/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="84" lean-forward="true" selection-start-line="80" selection-end-line="84" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1573#1825#0" expanded="true" />
+                <element signature="e#1824#1825#0" expanded="true" />
+                <element signature="e#2143#2144#0" expanded="true" />
+                <element signature="e#2184#2185#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework6_set_simple/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-282">
+              <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>system</find>
+      <find>sys</find>
+      <find>JACK</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/lesson8</dir>
+      <dir>$PROJECT_DIR$/src/main/java/homework6</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/trello/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/trello/LoginTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/DriverEventListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/BrowserFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson12/Pet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson12/Dog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson12/UseDog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson12/SearchGoogle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson12/GoogleSearch" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson12/SearchForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson12/GoogleSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson12/TreeSetExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Exam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson8/TestNGHelloWorld.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson14/Movie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson14/MovieTitlesComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson14/MovieScoreComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson14/SortExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson14/Movie14.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson14/MovieYearComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson14/GetRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6_set_simple/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6_collections_hand_input/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6_collections_get_min/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6_cats/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6_string_sort/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Movie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/Card.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/models/Card.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/GsonExample.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/interceptors/TrelloAuthInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/services/BoardsServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6_imdb/Movie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6_imdb/MapUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6_imdb/GetRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/models/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/models/TrelloList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/TrelloApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/services/ListServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/services/ListService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/api/TrelloRestClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trello/pages/TrelloBoardPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson11/Animal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson11/Dog.java" />
+        <option value="$PROJECT_DIR$/src/test/java/trello/TrelloAPITest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson11/SecondExamPart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson11/TwoVariablesClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson11/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lesson11/StudentProcessing.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="298" />
+    <option name="y" value="158" />
+    <option name="width" value="1391" />
+    <option name="height" value="791" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework4_fbbirthday" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework5_kismia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework6_collections_hand_input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework6_imdb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework6_set_simple" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework6_string_sort" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson11" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="trello" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="trello" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomationRoadTH2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomationRoadTH2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="trello" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="MANAGE_IGNORE_FILES_PROPERTY" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.StudentProcessing">
+    <configuration name="PPReportDownload" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pp_payments_report.PPReportDownload" />
+      <module name="AutomationRoadTH2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pp_payments_report.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecondExamPart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson11.SecondExamPart" />
+      <module name="AutomationRoadTH2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson11.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentProcessing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson11.StudentProcessing" />
+      <module name="AutomationRoadTH2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson11.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetRequest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationRoadTH2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework6_imdb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework6_imdb" />
+      <option name="MAIN_CLASS_NAME" value="homework6_imdb.GetRequest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetRequest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationRoadTH2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework6_imdb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework6_imdb" />
+      <option name="MAIN_CLASS_NAME" value="homework6_imdb.GetRequest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetRequest.imdbRequest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationRoadTH2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework6_imdb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework6_imdb" />
+      <option name="MAIN_CLASS_NAME" value="homework6_imdb.GetRequest" />
+      <option name="METHOD_NAME" value="imdbRequest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PPReportDownload" />
+      <item itemvalue="Application.SecondExamPart" />
+      <item itemvalue="Application.StudentProcessing" />
+      <item itemvalue="TestNG.GetRequest (1)" />
+      <item itemvalue="TestNG.GetRequest (2)" />
+      <item itemvalue="TestNG.GetRequest.imdbRequest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StudentProcessing" />
+        <item itemvalue="Application.SecondExamPart" />
+        <item itemvalue="TestNG.GetRequest.imdbRequest" />
+        <item itemvalue="TestNG.GetRequest (2)" />
+        <item itemvalue="TestNG.GetRequest (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c110d0d5-47c6-400d-aa82-e3908e1c3b6d" name="Default Changelist" comment="" />
+      <created>1554714030032</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554714030032</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1556090047245</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556090047245</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Second commit">
+      <created>1556209960276</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556209960276</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Exchange rates task in progress">
+      <created>1556283303584</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556283303584</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Exchange rates via string Task complete">
+      <created>1556288582440</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556288582440</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Exchange rates via string Task complete">
+      <created>1556616658434</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556616658434</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Exchange rates via string Task complete">
+      <created>1556630602909</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1556630602909</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Third commit">
+      <created>1557133005731</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557133005731</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Third commit">
+      <created>1557133683073</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1557133683073</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Third commit">
+      <created>1557133737133</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1557133737133</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Third commit">
+      <created>1557133813248</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557133813248</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Third commit">
+      <created>1557135120470</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557135120470</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Third commit">
+      <created>1557135161891</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1557135161891</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Third commit">
+      <created>1557135546958</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1557135546958</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Third commit">
+      <created>1557140235320</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1557140235321</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Third commit">
+      <created>1557147682554</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1557147682554</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Third commit">
+      <created>1557156509320</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1557156509320</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Third commit">
+      <created>1557225770933</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1557225770933</updated>
+    </task>
+    <task id="LOCAL-00018" summary="First commit">
+      <created>1557489113532</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1557489113532</updated>
+    </task>
+    <task id="LOCAL-00019" summary="First commit">
+      <created>1557500986267</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1557500986267</updated>
+    </task>
+    <task id="LOCAL-00020" summary="First commit">
+      <created>1558535550294</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1558535550294</updated>
+    </task>
+    <task id="LOCAL-00021" summary="First commit">
+      <created>1559231207207</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1559231207208</updated>
+    </task>
+    <task id="LOCAL-00022" summary="First commit">
+      <created>1560178722771</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1560178722771</updated>
+    </task>
+    <task id="LOCAL-00023" summary="First commit">
+      <created>1560181803410</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1560181803410</updated>
+    </task>
+    <task id="LOCAL-00024" summary="First commit">
+      <created>1560250450218</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1560250450219</updated>
+    </task>
+    <task id="LOCAL-00025" summary="First commit">
+      <created>1560251360554</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1560251360554</updated>
+    </task>
+    <task id="LOCAL-00026" summary="First commit">
+      <created>1560254908100</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1560254908100</updated>
+    </task>
+    <task id="LOCAL-00027" summary="First commit">
+      <created>1560257203894</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1560257203894</updated>
+    </task>
+    <task id="LOCAL-00028" summary="First commit">
+      <created>1560257378980</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1560257378980</updated>
+    </task>
+    <task id="LOCAL-00029" summary="First commit">
+      <created>1560266573448</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1560266573448</updated>
+    </task>
+    <task id="LOCAL-00030" summary="First commit">
+      <created>1560266773188</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1560266773188</updated>
+    </task>
+    <task id="LOCAL-00031" summary="First commit">
+      <created>1560271472367</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1560271472367</updated>
+    </task>
+    <task id="LOCAL-00032" summary="First commit">
+      <created>1560358910158</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1560358910158</updated>
+    </task>
+    <task id="LOCAL-00033" summary="First commit">
+      <created>1560503116380</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1560503116381</updated>
+    </task>
+    <task id="LOCAL-00034" summary="First commit">
+      <created>1560529274565</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1560529274565</updated>
+    </task>
+    <task id="LOCAL-00035" summary="First commit">
+      <created>1560870146778</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1560870146778</updated>
+    </task>
+    <task id="LOCAL-00036" summary="First commit">
+      <created>1561969108955</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1561969108955</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 18h 22m 03s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 18h 24m 29s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 18h 25m 38s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 18h 38m 44s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 18h 42m 40s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 18h 46m 02s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 18h 50m 20s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 18h 52m 39s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 19h 01m 21s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetRequest_imdbRequest - 2019.06.14 at 19h 23m 11s.xml">
+      <configuration name="GetRequest.imdbRequest" configurationId="TestNG" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2257886" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37041035" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32937366" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32937366" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="GitHub Pull Requests" order="11" weight="0.32937366" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Second commit" />
+    <MESSAGE value="Exchange rates task in progress" />
+    <MESSAGE value="Exchange rates via string Task complete" />
+    <MESSAGE value="Third commit" />
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/annotations/DataProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/annotations/Parameters.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson8/TestNGHelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson14/SortExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson14/MovieTitlesComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding>
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson14/MovieScoreComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+          <folding>
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson8/GeneralTestDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework5_seabattle/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework5_seabattle/HumanInputStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" selection-start-line="13" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson14/MovieYearComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+          <folding>
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_imdb.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson14/Movie14.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="3" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_imdb/MapUtil.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="9" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson5/BrowserFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="12" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/services/BoardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/services/ListService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/GsonExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/models/TrelloList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/models/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/models/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson8/AnnotationsExampleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/TrelloApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson8/CustomListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/TrelloRestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="34" selection-start-line="12" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson14/GetRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="39" selection-start-line="29" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/api/interceptors/TrelloAuthInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/trello/TrelloTestBundle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trello/pages/TrelloBoardPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7693#7694#0" expanded="true" />
+            <element signature="e#7729#7730#0" expanded="true" />
+            <element signature="e#7755#7756#0" expanded="true" />
+            <element signature="e#7791#7792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="2" selection-end-line="7" />
+          <folding>
+            <element signature="e#58#59#0" expanded="true" />
+            <element signature="e#94#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/Dog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="9" selection-end-line="18" />
+          <folding>
+            <element signature="e#89#90#0" expanded="true" />
+            <element signature="e#125#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_imdb/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_imdb/GetRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="195" column="22" selection-start-line="195" selection-start-column="22" selection-end-line="195" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5332#5333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework2/CountNumberOfSeats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="58" column="88" lean-forward="true" selection-start-line="48" selection-end-line="58" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework2/ExchangeRates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework2/GetFilmShawshankRedemptionProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework2/Akinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="87" column="75" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework4_fbbirthday/FBBirthdayGreetings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework5_kismia/KismiaTestNG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="62" column="114" lean-forward="true" selection-start-line="61" selection-end-line="62" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/trello/TrelloAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/SecondExamPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#164#173#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/TwoVariablesClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="2" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework3/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework3/HumanInputStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_cats/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_collections_get_min/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_collections_hand_input/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_set_simple/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-282">
+          <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6_string_sort/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="84" lean-forward="true" selection-start-line="80" selection-end-line="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1573#1825#0" expanded="true" />
+            <element signature="e#1824#1825#0" expanded="true" />
+            <element signature="e#2143#2144#0" expanded="true" />
+            <element signature="e#2184#2185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="91" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lesson11/StudentProcessing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="781">
+          <caret line="62" selection-start-line="4" selection-end-line="62" />
+          <folding>
+            <element signature="e#448#457#0" expanded="true" />
+            <element signature="e#653#908#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#1381#1401#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>AutomationRoadTH2019</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
